@@ -69,10 +69,10 @@ Default CSS
 =================================================*/
 
 $font-family: 'Nunito', sans-serif;
-$main-color: #ff5d22;
-$white-color: #ffffff;
-$black-color: #221638;
-$optional-color: #6b6b84;
+$main-color: var(--hover-color);
+$white-color: var(--white-color);
+$black-color: var(--text2-color);
+$optional-color: var(--text-color);
 $font-size: 17px;
 $transition: .5s;
 
@@ -735,7 +735,7 @@ Navbar Area CSS
                         }
                         .single-category-widget {
                             position: relative;
-                            border-top: 1px solid #eeeeee;
+                            border-top: 1px solid var(--border-color);
                             padding-top: 30px;
                             margin: {
                                 top: 30px;
@@ -753,7 +753,7 @@ Navbar Area CSS
                                 border: {
                                     width: 1.5px;
                                     style: dashed;
-                                    color: #eeeeee;
+                                    color: var(--border-color);
                                     radius: 50%;
                                 };
                                 i {
@@ -3581,7 +3581,7 @@ Services Details Area CSS
         li {
             a {
                 display: block;
-                border-bottom: 1px solid #eeeeee;
+                border-bottom: 1px solid var(--border-color);
                 padding: 20px 30px;
                 position: relative;
                 font: {
@@ -3632,7 +3632,7 @@ Services Details Area CSS
             li {
                 a {
                     display: block;
-                    border-bottom: 1px solid #eeeeee;
+                    border-bottom: 1px solid var(--border-color);
                     position: relative;
                     padding: {
                         top: 15px;
@@ -3650,7 +3650,7 @@ Services Details Area CSS
                     }
                 }
                 &:first-child {
-                    border-top: 1px solid #eeeeee;
+                    border-top: 1px solid var(--border-color);
                 }
             }
         }
@@ -3674,7 +3674,7 @@ Services Details Area CSS
     
             li {
                 margin-bottom: 20px;
-                border-bottom: 1px solid #eeeeee;
+                border-bottom: 1px solid var(--border-color);
                 position: relative;
                 color: $optional-color;
                 font: {
@@ -4359,7 +4359,7 @@ Courses Details Area CSS
             }
         }
         .courses-curriculum {
-            border: 1px solid #eeeeee;
+            border: 1px solid var(--border-color);
             border-radius: 5px;
             padding: 30px;
             margin: {
@@ -5528,7 +5528,7 @@ CaseStudy/Projects Details Area CSS
 
         li {
             margin-bottom: 20px;
-            border-bottom: 1px solid #eeeeee;
+            border-bottom: 1px solid var(--border-color);
             position: relative;
             color: $optional-color;
             font: {
@@ -7010,7 +7010,7 @@ Products Details Area CSS
             .nav-link {
                 color: #cccccc;
                 border: none;
-                border-bottom: 1px solid #eeeeee;
+                border-bottom: 1px solid var(--border-color);
                 padding: 0;
                 background-color: transparent;
                 position: relative;
@@ -7623,7 +7623,7 @@ Checkout Area CSS
         margin-bottom: 30px;
         position: relative;
         padding-bottom: 10px;
-        border-bottom: 1px solid #eeeeee;
+        border-bottom: 1px solid var(--border-color);
         font: {
             size: 24px;
         };
@@ -7657,7 +7657,7 @@ Checkout Area CSS
             float: unset;
             width: 100%;
             background: #f8f8f8;
-            border-color: #eeeeee;
+            border-color: var(--border-color);
             color: $black-color;
             transition: $transition;
             padding: 0 0 0 12px;
@@ -7780,7 +7780,7 @@ Checkout Area CSS
         margin-bottom: 30px;
         position: relative;
         padding-bottom: 10px;
-        border-bottom: 1px solid #eeeeee;
+        border-bottom: 1px solid var(--border-color);
         font: {
             size: 24px;
         };
@@ -7999,7 +7999,7 @@ Events Area CSS
                 bottom: 0;
                 width: 60px;
                 height: 1px;
-                background-color: #eeeeee;
+                background-color: var(--border-color);
             }
         }
     }
@@ -8853,7 +8853,7 @@ Blog Details Area CSS
                     margin-right: 20px;
                     position: relative;
                     display: inline-block;
-                    border-right: 1px solid #eeeeee;
+                    border-right: 1px solid var(--border-color);
                     font: {
                         weight: 600;
                         size: $font-size;
@@ -8960,7 +8960,7 @@ Blog Details Area CSS
     .article-footer {
         display: flex;
         flex-wrap: wrap;
-        border-top: 1px solid #eeeeee;
+        border-top: 1px solid var(--border-color);
         padding-top: 30px;
         margin: {
             top: 30px;
@@ -9197,8 +9197,8 @@ blockquote, .blockquote {
         bottom: 30px;
     };
     border: {
-        top: 1px solid #eeeeee;
-        bottom: 1px solid #eeeeee;
+        top: 1px solid var(--border-color);
+        bottom: 1px solid var(--border-color);
     };
 }
 .prev-link-wrapper {
@@ -9420,7 +9420,7 @@ blockquote, .blockquote {
         margin-left: 20px;
     }
     .comment-body {
-        border-bottom: 1px dashed #eeeeee;
+        border-bottom: 1px dashed var(--border-color);
         padding-left: 70px;
         color: $black-color;
         margin-bottom: 20px;
@@ -9865,7 +9865,7 @@ Widget Sidebar CSS
             margin-bottom: 25px;
             position: relative;
             padding-bottom: 7px;
-            border-bottom: 1px solid #eeeeee;
+            border-bottom: 1px solid var(--border-color);
             font: {
                 size: 22px;
             };
@@ -10129,7 +10129,7 @@ Widget Sidebar CSS
         .item {
             overflow: hidden;
             margin-bottom: 20px;
-            border-bottom: 1px solid #eeeeee;
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 20px;
 
             &:last-child {
@@ -10263,7 +10263,7 @@ Widget Sidebar CSS
         .item {
             overflow: hidden;
             margin-bottom: 20px;
-            border-bottom: 1px solid #eeeeee;
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 20px;
 
             &:last-child {
@@ -10378,7 +10378,7 @@ Widget Sidebar CSS
                     display: block;
                     padding: 15px 25px 15px 40px;
                     color: $optional-color;
-                    border: 1px solid #eeeeee;
+                    border: 1px solid var(--border-color);
                     font: {
                         size: $font-size;
                         weight: 700;
@@ -10523,7 +10523,7 @@ Profile Authentication Area CSS
                     bottom: 0;
                     content: '';
                     transition: $transition;
-                    background-color: #eeeeee;
+                    background-color: var(--border-color);
                 }
                 &::after {
                     width: 0;
@@ -10734,7 +10734,7 @@ Coming Soon Area CSS
             .input-newsletter {
                 border-radius: 0;
                 border: none;
-                border-bottom: 2px solid #eeeeee;
+                border-bottom: 2px solid var(--border-color);
                 padding: 0 0 0 32px;
                 color: $black-color;
                 height: 45px;

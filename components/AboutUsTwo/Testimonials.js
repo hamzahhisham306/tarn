@@ -35,11 +35,11 @@ const Testimonials = () => {
     }, [])
 
     return (
-        <section className="testimonials-area pt-100 bg-f1f8fb">
+        <section className="testimonials-area pt-100 bg-f1f8fb testimonialsContinare">
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">
-                        <img src="/img/star-icon.png" alt="image" /> 
+                        <img src="/img/star-icon.png" alt="image"  className="starIcon"/> 
                         Testimonials
                     </span>
                     <h2>What Our Clients are Saying?</h2>
@@ -51,41 +51,40 @@ const Testimonials = () => {
                     {...options}
                 > 
                     <div className="single-testimonials-item">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-
+                        {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p> */}
+                          <img src="/img/projectOne.webp"/> 
                         <div className="client-info">
                             <div className="d-flex justify-content-center align-items-center">
-                                <img src="/img/testimonials/client1.jpg" alt="image" />
+                                {/* <img src="/img/projectTwo.webp" alt="image" /> */}
                                 <div className="title">
-                                    <h3>Alex Maxwell</h3>
-                                    <span>CEO at EnvyTheme</span>
+                                    <h3>Mobile Friendly Website Layouts</h3>
+                                    <span className="viewButton">View</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="single-testimonials-item">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    <img src="/img/projectTwo.webp" alt="image" />
 
                         <div className="client-info">
                             <div className="d-flex justify-content-center align-items-center">
-                                <img src="/img/testimonials/client2.jpg" alt="image" />
+
                                 <div className="title">
-                                    <h3>David Warner</h3>
-                                    <span>CEO at Envato</span>
+                                    <h3>Digital Agency HTML Templates</h3>
+                                    <span className="viewButton">View</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="single-testimonials-item">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                    <img src="/img/projectTwo.webp" alt="image" />
                         <div className="client-info">
                             <div className="d-flex justify-content-center align-items-center">
-                                <img src="/img/testimonials/client3.jpg" alt="image" />
                                 <div className="title">
-                                    <h3>Sarah Taylor</h3>
-                                    <span>CEO at ThemeForest</span>
+                                    <h3>Digital Agency HTML Templates</h3>
+                                    <span className="viewButton">View</span>
                                 </div>
                             </div>
                         </div>

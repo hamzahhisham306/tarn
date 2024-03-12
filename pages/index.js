@@ -1,36 +1,70 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../components/_App/Navbar';
-import MainBanner from '../components/ITServices/MainBanner';
-import OurSolutions from '../components/ITServices/OurSolutions';
-import OurServices from '../components/ITServices/OurServices';
-import OurFeatures from '../components/ITServices/OurFeatures';
-import TeamMember from '../components/ITServices/TeamMember';
-import RecentProjects from '../components/ITServices/RecentProjects';
-import Pricing from '../components/ITServices/Pricing';
-import Testimonials from '../components/ITServices/Testimonials';
-import Partner from '../components/ITServices/Partner';
-import OurBlog from '../components/ITServices/OurBlog';
-import ProjectStartArea from '../components/ITServices/ProjectStartArea';
+import MainBanner from '../components/DataScienceAndMLCompany/MainBanner';
+import OurSolutions from '../components/DataScienceAndMLCompany/OurSolutions';
+import AboutUs from '../components/DataScienceAndMLCompany/AboutUs';
+import OurServices from '../components/DataScienceAndMLCompany/OurServices';
+import HowItWork from '../components/DataScienceAndMLCompany/HowItWork';
+import CaseStudySlider from '../components/DataScienceAndMLCompany/CaseStudySlider';
+import TeamMembers from '../components/DataScienceAndMLCompany/TeamMembers';
+// import Testimonials from '../components/DataScienceAndMLCompany/Testimonials';
+// import Partner from '../components/DataScienceAndMLCompany/Partner';
+import BlogPost from '../components/DataScienceAndMLCompany/BlogPost';
+import StartProject from '../components/DataScienceAndMLCompany/StartProject';
 import Footer from '../components/_App/Footer';
+import AboutUsContent from '../components/AboutUsTwo/AboutUsContent';
+import OurMission from '../components/AboutUsTwo/OurMission';
+import Testimonials from '../components/AboutUsTwo/Testimonials';
+import axios from 'axios';
 
-const Index = () => {
+const Index = ({ url }) => {
+    const [data, setData] = useState(null)
+    const getData = async () => {
+
+        await axios.get(`${url}/get_settings`).then((res) => {
+            setData(res.data)
+
+        }).catch((err) => {
+
+        })
+    }
+    useEffect(() => {
+        getData()
+    }, []);
     return (
         <>
-            <Navbar />
+            <Navbar data={data} />
             <MainBanner />
             <OurSolutions />
-            <OurServices />
-            <OurFeatures />
-            <TeamMember />
-            <RecentProjects />
-            <Pricing />
+
+            <AboutUsContent />
+            <OurMission />
             <Testimonials />
-            <Partner />
-            <OurBlog />
-            <ProjectStartArea />
-            <Footer />
+            {/* <AboutUs /> */}
+            <OurServices />
+            {/* <HowItWork /> */}
+            {/* <CaseStudySlider /> */}
+            {/* <TeamMembers /> */}
+            {/* <Testimonials /> */}
+            {/* <Partner /> */}
+            <BlogPost />
+            <StartProject />
+            <Footer data={data} />
         </>
     );
 }
 
 export default Index;
+
+
+// export async function getStaticProps() {
+//     const url = process.env.REACT_BACKEND_URL;
+//     const respones = await axios.get(`${url}/get_settings`).catch((err) => {
+//         console.log(err);
+//     })
+//     return {
+//         props: {
+//             data: respones?.data?.data,
+//         }
+//     }
+// }

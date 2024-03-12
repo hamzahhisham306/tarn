@@ -42,12 +42,7 @@ const MainBanner = () => {
                                 >Get professional & reliable research oriented solutions for Data Science and Machine Learning business needs. Enjoy stress free decesion making!</p>
                      
                                 <div className="btn-box animate__animated animate__fadeInRight animate__delay-0.1s">
-                                    <Link href="/about-us">
-                                        <a className="default-btn">
-                                            <i className="flaticon-structure"></i> 
-                                            About Us <span></span>
-                                        </a>
-                                    </Link>
+                                 
 
                                     <Link href="#play-video">
                                         <a

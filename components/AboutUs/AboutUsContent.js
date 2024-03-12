@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
-const AboutUsContent = () => {
+const AboutUsContent = ({data}) => {
+    console.log("data>>About>>>>>>>>>>>>>>>",data)
     return (
         <section className="about-area ptb-100">
             <div className="container-fluid">

@@ -10,43 +10,12 @@ const OurMission = () => {
                         <div className="our-mission-content">
                             <div className="content">
                                 <span className="sub-title">
-                                    <img src="/img/star-icon.png" alt="image" /> Our Mission
+                                    <img src="/img/star-icon.png" alt="image" /> 
                                 </span>
-                                <h2>Data Science & Data Analysis Agency</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                                <ul className="our-mission-list">
-                                    <li>
-                                        <i className="flaticon-tick"></i>
-                                        Global Experience
-                                        <img src="/img/our-mission/our-mission-shape2.png" alt="image" />
-                                    </li>
-                                    <li>
-                                        <i className="flaticon-tick"></i>
-                                        Value for Results
-                                        <img src="/img/our-mission/our-mission-shape2.png" alt="image" />
-                                    </li>
-                                    <li>
-                                        <i className="flaticon-tick"></i>
-                                        User Prespective
-                                        <img src="/img/our-mission/our-mission-shape2.png" alt="image" />
-                                    </li>
-                                    <li>
-                                        <i className="flaticon-tick"></i>
-                                        Business Prespective
-                                        <img src="/img/our-mission/our-mission-shape2.png" alt="image" />
-                                    </li>
-                                    <li>
-                                        <i className="flaticon-tick"></i>
-                                        Expert Prepective
-                                        <img src="/img/our-mission/our-mission-shape2.png" alt="image" />
-                                    </li>
-                                    <li>
-                                        <i className="flaticon-tick"></i>
-                                        Retail Solutions
-                                        <img src="/img/our-mission/our-mission-shape2.png" alt="image" />
-                                    </li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                                <h2>How To Succeed in Today’s Competitive Market?</h2>
+                                <p>In the quest for an expanded market share, Assistech Comapn introduces the "Solid-Business" Approach...</p>
+                                <p>An encompassing strategy aimed at refining every aspect of your enterprise for unparalleled success.</p>
+                                <p>From a careful industry analysis aligning your brand seamlessly with market demands to persona-centric campaigns fostering lasting connections, our approach is rooted in personalized, data-driven insights.</p>
                                 
                                 <Link href="/about-us-two">
                                     <a className="default-btn">

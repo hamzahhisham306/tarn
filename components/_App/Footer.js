@@ -1,10 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Footer = () => {
+const Footer = ({ data }) => {
 
     const currentYear = new Date().getFullYear();
-
     return (
         <footer className="footer-area bg-color">
             <div className="container">
@@ -12,39 +11,21 @@ const Footer = () => {
                     <div className="col-lg-4 col-sm-6">
                         <div className="single-footer-widget">
                             <a href="/" className="logo">
-                                <img src="/img/logo.png" alt="logo" />
+                                <img src={data?.data?.footer_icon} alt="logo" className="footer_icon" />
                             </a>
                             <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
 
                             <ul className="social-link">
-                                <li>
-                                    <Link href="https://www.facebook.com/">
+                                {data?.data?.social_media.map((item)=>{
+                                    return <li>
+                                    <Link href={item?.link}>
                                         <a className="d-block" target="_blank">
-                                            <i className='bx bxl-facebook'></i>
+                                            <i className={`bx bxl-${item?.type}`}></i>
                                         </a>
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link href="https://www.twitter.com/">
-                                        <a className="d-block" target="_blank">
-                                            <i className='bx bxl-twitter'></i>
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="https://www.instagram.com/">
-                                        <a className="d-block" target="_blank">
-                                            <i className='bx bxl-instagram'></i>
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="https://www.linkedin.com/">
-                                        <a className="d-block" target="_blank">
-                                            <i className='bx bxl-linkedin'></i>
-                                        </a>
-                                    </Link>
-                                </li>
+                                })}
+                 
                             </ul>
                         </div>
                     </div>
@@ -52,14 +33,14 @@ const Footer = () => {
                     <div className="col-lg-2 col-sm-6">
                         <div className="single-footer-widget pl-5">
                             <h3>Explore</h3>
-                            
+
                             <ul className="footer-links-list">
                                 <li>
                                     <Link href="/">
                                         <a>Home</a>
                                     </Link>
                                 </li>
-                                    <li>
+                                <li>
                                     <Link href="/about-us">
                                         <a>About</a>
                                     </Link>
@@ -123,20 +104,20 @@ const Footer = () => {
 
                             <ul className="footer-contact-info">
                                 <li>
-                                    <i className='bx bx-map'></i> 
-                                    175 5th Ave, New York, NY 10010, <br /> United States
+                                    <i className='bx bx-map'></i>
+                                    {data?.data?.address}
                                 </li>
                                 <li>
                                     <i className='bx bx-phone-call'></i>
-                                    <a href="tel:+44587154756">+1 (123) 456 7890</a>
+                                    <a href="tel:+44587154756">{data?.data?.phone_number}</a>
                                 </li>
                                 <li>
                                     <i className='bx bx-envelope'></i>
-                                    <a href="mailto:hello@tarn.com">hello@tarn.com</a>
+                                    <a href="mailto:hello@tarn.com">{data?.data?.email}</a>
                                 </li>
                                 <li>
                                     <i className='bx bxs-inbox'></i>
-                                    <a href="tel:+557854578964">+55 785 4578964</a>
+                                    <a href="tel:+557854578964">{data?.data?.phone_number}</a>
                                 </li>
                             </ul>
                         </div>
@@ -145,9 +126,7 @@ const Footer = () => {
 
                 <div className="footer-bottom-area">
                     <div className="row align-items-center">
-                        <div className="col-lg-6 col-md-6">
-                            <p>Copyright &copy;{currentYear} <strong>Tarn</strong> All rights reserved <a target="_blank" href="https://envytheme.com/">EnvyTheme</a></p>
-                        </div>
+                     
 
                         <div className="col-lg-6 col-md-6">
                             <ul>

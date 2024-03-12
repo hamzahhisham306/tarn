@@ -8,7 +8,6 @@ const TermsOfService = () => {
     return (
         <>
             <Navbar />
-
             <PageBanner
                 pageTitle="Terms of Service" 
                 homePageText="Home" 

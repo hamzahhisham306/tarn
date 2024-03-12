@@ -20,43 +20,16 @@ const AboutUsContent = () => {
                             <div className="content">
                                 <span className="sub-title">
                                     <img src="/img/star-icon.png" alt="image" /> 
-                                    About Us
+                                
                                 </span>
-                                <h2>Business Analytics For Data-Driven Solutions</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                                <ul className="about-list">
-                                    <li>
-                                        <i className="flaticon-tick"></i>
-                                        Big Data
-                                        <img src="/img/our-mission/our-mission-shape2.png" alt="image" />
-                                    </li>
-                                    <li>
-                                        <i className="flaticon-tick"></i>
-                                        Data Visualization
-                                        <img src="/img/our-mission/our-mission-shape2.png" alt="image" />
-                                    </li>
-                                    <li>
-                                        <i className="flaticon-tick"></i>
-                                        Data Warehousing
-                                        <img src="/img/our-mission/our-mission-shape2.png" alt="image" />
-                                    </li>
-                                    <li>
-                                        <i className="flaticon-tick"></i>
-                                        Data Management
-                                        <img src="/img/our-mission/our-mission-shape2.png" alt="image" />
-                                    </li>
-                                    <li>
-                                        <i className="flaticon-tick"></i>
-                                        Business Intelligence
-                                        <img src="/img/our-mission/our-mission-shape2.png" alt="image" />
-                                    </li>
-                                    <li>
-                                        <i className="flaticon-tick"></i>
-                                        Business Intelligence
-                                        <img src="/img/our-mission/our-mission-shape2.png" alt="image" />
-                                    </li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                                <h2>Win a BIGGER Market Share</h2>
+                                <p>Are you feeling the pressure of relentless business competition, struggling to carve out your space in a crowded market?</p>
+                            
+                                <p>You're not alone. In today's cutthroat business landscape, standing out and securing a larger market share is a challenge that keeps many business owners awake at night.</p>
+                                <p>The truth is, ignoring the fierce competition means risking stagnation or, worse, losing ground to more assertive rivals.</p>
+                                <p>Your potential customers are bombarded with choices every day, and if your brand isn't unmistakably superior, you're at risk of being overlooked.
+
+Picture this: your competitors are out there, actively engaging with your target audience, stealing attention, and grabbing a larger slice of the market pie</p>
                                 <Link href="/about-us-two">
                                     <a className="default-btn">
                                         <i className="flaticon-right"></i> 

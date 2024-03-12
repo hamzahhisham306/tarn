@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const ContactInfo = () => {
+const ContactInfo = ({data}) => {
     return (
         <div className="contact-info-area pt-100 pb-70">
             <div className="container">
@@ -15,7 +15,7 @@ const ContactInfo = () => {
                                 <i className='bx bx-map'></i>
                             </div>
                             <h3>Our Address</h3>
-                            <p>175 5th Ave, New York, NY 10010, United States</p>
+                            <p>{data?.data?.address}</p>
                         </div>
                     </div>
 
@@ -28,8 +28,8 @@ const ContactInfo = () => {
                                 <i className='bx bx-phone-call'></i>
                             </div>
                             <h3>Contact</h3>
-                            <p>Mobile: <a href="tel:+44457895789">(+44) - 45789 - 5789</a></p>
-                            <p>E-mail: <a href="mailto:hello@tracer.com">hello@tarn.com</a></p>
+                            <p>Mobile: <a href="tel:+44457895789">{data?.data?.phone_number}</a></p>
+                            <p>E-mail: <a href="mailto:hello@tracer.com">{data?.data?.email}</a></p>
                         </div>
                     </div>
 

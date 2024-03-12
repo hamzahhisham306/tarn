@@ -6,11 +6,11 @@ const HowItWork = () => {
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">
-                        <img src="/img/star-icon.png" alt="image" /> 
+                        <img src="/img/star-icon.png" alt="image" />
                         How It's Work
                     </span>
-                    <h2>The Data Science Process</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    <h2>Next-Level Advantage</h2>
+                    <p>3 Reasons Our Solutions Redefine Business Success</p>
                 </div>
 
                 <div className="row">
@@ -18,10 +18,15 @@ const HowItWork = () => {
                         <div className="single-process-box">
                             <div className="number">1</div>
                             <div className="image">
-                                <img src="/img/process/process1.png" alt="image" />
+                                <img src="/img/process/process1.png" alt="image" className="imgNext" />
                             </div>
-                            <h3>Frame the Problem</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            <h3 className="titleNext">Strategic Growth and Efficiency</h3>
+                            <p className="parNext">Experience a surge in business performance as our Business Improvement solutions unlock new levels of efficiency and strategic growth.
+
+                                Through meticulous analysis and optimization of your operations, we identify and eliminate bottlenecks, streamline processes, and provide actionable insights.
+
+                                The result? A leaner, more agile business ready to seize opportunities and navigate challenges, setting the stage for sustainable growth
+                            </p>
                         </div>
                     </div>
 
@@ -29,10 +34,14 @@ const HowItWork = () => {
                         <div className="single-process-box">
                             <div className="number">2</div>
                             <div className="image">
-                                <img src="/img/process/process2.png" alt="image" />
+                                <img src="/img/process/process2.png" alt="image" className="imgNext" />
                             </div>
-                            <h3>Collect the Raw Data</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            <h3 className="titleNext">Amplified Market Presence and Engagement</h3>
+                            <p className="parNext">With our advanced Marketing Systems, enjoy a dynamic and impactful presence in the market.
+
+                                Benefit from targeted campaigns, harnessing the latest technologies and data-driven strategies to reach your audience effectively.
+
+                                From heightened customer acquisition to improved retention rates, our solutions ensure that your business not only attracts attention but fosters lasting connections, establishing a strong and loyal customer base.</p>
                         </div>
                     </div>
 
@@ -40,45 +49,18 @@ const HowItWork = () => {
                         <div className="single-process-box">
                             <div className="number">3</div>
                             <div className="image">
-                                <img src="/img/process/process3.png" alt="image" />
+                                <img src="/img/process/process3.png" alt="image" className="imgNext" />
                             </div>
-                            <h3>Process the Data</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            <h3 className="titleNext"> Memorable Brand Identity and Recognition</h3>
+                            <p className="parNext">Make an indelible mark on your industry with our Branding & Design solutions. Our creative experts craft compelling visual identities that resonate with your audience, ensuring your brand stands out in a crowded market.
+
+                                Whether it's a refreshed logo, a complete visual overhaul, or strategic brand positioning, we elevate your business aesthetics.
+
+                                Enjoy increased brand recognition, trust, and loyalty as your business becomes synonymous with quality and distinction.
+                            </p>
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-6">
-                        <div className="single-process-box ">
-                            <div className="number">4</div>
-                            <div className="image">
-                                <img src="/img/process/process4.png" alt="image" />
-                            </div>
-                            <h3>Explore the Data</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6">
-                        <div className="single-process-box">
-                            <div className="number">5</div>
-                            <div className="image">
-                                <img src="/img/process/process5.png" alt="image" />
-                            </div>
-                            <h3>Perform In-depth Analysis</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6">
-                        <div className="single-process-box">
-                            <div className="number">6</div>
-                            <div className="image">
-                                <img src="/img/process/process6.png" alt="image" />
-                            </div>
-                            <h3>Communicate Results</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
 
