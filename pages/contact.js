@@ -4,40 +4,26 @@ import PageBanner from '../components/Common/PageBanner';
 import ContactInfo from '../components/Contact/ContactInfo';
 import ContactForm from '../components/Contact/ContactForm';
 import Footer from '../components/_App/Footer';
-import axios from 'axios';
 
-const Contact = (props) => {
+const Contact = () => {
     return (
         <>
-            <Navbar data={props}/>
+            <Navbar />
 
             <PageBanner
-                pageTitle="Contact"
-                homePageText="Home"
-                homePageUrl="/"
-                activePageText="Contact"
+                pageTitle="Contact" 
+                homePageText="Home" 
+                homePageUrl="/" 
+                activePageText="Contact" 
             />
 
-            <ContactInfo data={props} />
+            <ContactInfo />
 
             <ContactForm />
-
-            <Footer data={props}/>
+            
+            <Footer />
         </>
     );
 }
 
 export default Contact;
-
-
-export async function getStaticProps() {
-    const url = process.env.REACT_BACKEND_URL;
-    const respones = await axios.get(`${url}/get_settings`).catch((err) => {
-        console.log(err);
-    })
-    return {
-        props: {
-            data: respones?.data?.data,
-        }
-    }
-}

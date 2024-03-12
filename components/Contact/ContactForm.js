@@ -33,12 +33,9 @@ const ContactForm = ({ data }) => {
     const { name, value } = e.target;
     setContact(prevState => ({ ...prevState, [name]: value }));
   }
-  useEffect(() => {
-    console.log('ContactForm component mounted>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
-  }, []);
+
   
   async function handleSubmit(e) {
-    console.log("Enter to the function<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
     e.preventDefault();
 
 

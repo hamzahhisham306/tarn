@@ -61,6 +61,7 @@ $value_nine: 1550px;
             .navbar-collapse {
                 margin-top: 8px !important;
                 max-height: 70vh;
+                overflow-y: scroll;
                 border-top: 1px solid #eee;
                 padding-top: 10px;
  

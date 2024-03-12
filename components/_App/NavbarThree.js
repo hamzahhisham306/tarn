@@ -13,13 +13,13 @@ const NavbarThree = () => {
     React.useEffect(() => {
         let elementId = document.getElementById("navbar");
         document.addEventListener("scroll", () => {
-            if (window?.scrollY > 170) {
+            if (window.scrollY > 170) {
                 elementId.classList.add("is-sticky");
             } else {
                 elementId.classList.remove("is-sticky");
             }
         });
-        window?.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     })
 
     const classOne = collapsed ? 'collapse navbar-collapse' : 'collapse navbar-collapse show';

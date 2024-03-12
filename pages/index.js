@@ -23,7 +23,7 @@ const Index = ({ url }) => {
 
         await axios.get(`${url}/get_settings`).then((res) => {
             setData(res.data)
-
+           
         }).catch((err) => {
 
         })
@@ -31,6 +31,7 @@ const Index = ({ url }) => {
     useEffect(() => {
         getData()
     }, []);
+
     return (
         <>
             <Navbar data={data} />
