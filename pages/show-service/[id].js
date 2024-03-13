@@ -31,7 +31,7 @@ const ServiceDetails = ({ url }) => {
         }
         getDataReated();
 
-    },[])
+    },[id])
     return (
         <>
             <PageBanner

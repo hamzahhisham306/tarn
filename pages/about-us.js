@@ -23,6 +23,7 @@ const AboutUs = ({ url }) => {
     useEffect(() => {
         getAboutData();
     }, []);
+    console.log("abo",data)
     return (
         <>
             <PageBanner
@@ -31,8 +32,8 @@ const AboutUs = ({ url }) => {
                 homePageUrl="/"
                 activePageText="About Us"
             />
-            {/* <AboutUsContent data={data[0]}/>
-            <OurMission data={data[1]}/> */}
+            <AboutUsContent data={data} />
+            <OurMission data={data}/>
             {/* <OurHistory />
             <WhyChooseUs />
             <HowItWork />

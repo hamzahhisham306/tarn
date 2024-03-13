@@ -3,7 +3,6 @@ import OurSolutions from '../components/DataScienceAndMLCompany/OurSolutions';
 import OurServices from '../components/DataScienceAndMLCompany/OurServices';
 import CaseStudySlider from '../components/DataScienceAndMLCompany/CaseStudySlider';
 import Partner from '../components/DataScienceAndMLCompany/Partner';
-import StartProject from '../components/DataScienceAndMLCompany/StartProject';
 import AboutUsContent from '../components/AboutUsTwo/AboutUsContent';
 import OurMission from '../components/AboutUsTwo/OurMission';
 import Testimonials from '../components/AboutUsTwo/Testimonials';
