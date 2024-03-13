@@ -31,7 +31,8 @@ const MainBanner = () => {
                                         animate__fadeInLeft 
                                         animate__delay-0.1s
                                     "
-                                >Data Science Consulting Services</h1>
+                                >Assisting Your Rise
+                                </h1>
                          
                                 <p 
                                     className="
@@ -39,24 +40,18 @@ const MainBanner = () => {
                                         animate__fadeInLeft 
                                         animate__delay-0.1s
                                     "
-                                >Get professional & reliable research oriented solutions for Data Science and Machine Learning business needs. Enjoy stress free decesion making!</p>
+                                >Assisting Brands To Thrive in Today’s Competitive Market Using The “Solid-Business” Approach</p>
                      
                                 <div className="btn-box animate__animated animate__fadeInRight animate__delay-0.1s">
-                                    <Link href="/about-us">
-                                        <a className="default-btn">
-                                            <i className="flaticon-structure"></i> 
-                                            About Us <span></span>
-                                        </a>
-                                    </Link>
-
-                                    <Link href="#play-video">
+                                  
+                                    {/* <Link href="#play-video">
                                         <a
                                             onClick={e => {e.preventDefault(); openModal()}}
                                             className="video-btn popup-youtube"
                                         > 
                                             <i className="flaticon-google-play"></i> Watch Video
                                         </a>
-                                    </Link>
+                                    </Link> */}
                                 </div>
                             </div>
                         </div>

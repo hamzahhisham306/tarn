@@ -6,7 +6,10 @@ import Partner from '../components/DataScienceAndMLCompany/Partner';
 import AboutUsContent from '../components/AboutUsTwo/AboutUsContent';
 import OurMission from '../components/AboutUsTwo/OurMission';
 import Testimonials from '../components/AboutUsTwo/Testimonials';
-
+import WhyChooseUs from '../components/AboutUs/WhyChooseUs';
+import StartProject from '../components/Common/StartProject';
+// import ServicesStyleThree from '../components/Services/ServicesStyleThree';
+import FeaturedServices from '../components/DigitalMarketingAgency/FeaturedServices';
 const Index = ({ url }) => {
  
 
@@ -17,11 +20,14 @@ const Index = ({ url }) => {
             <CaseStudySlider url={url} />
             <AboutUsContent />
             <OurMission />
+            <OurServices url={url}/>
+           
             <Testimonials url={url}/>
             <Partner url={url} />
-
-            <OurServices url={url}/>
-        
+          {/* <ServicesStyleThree/> */}
+          <FeaturedServices/>
+             <WhyChooseUs/>
+             <StartProject/>
         </>
     );
 }

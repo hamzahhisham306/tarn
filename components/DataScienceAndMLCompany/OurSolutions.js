@@ -10,8 +10,8 @@ const OurSolutions = () => {
                         <img src="/img/star-icon.png" alt="image" /> 
                         Our Solutions
                     </span>
-                    <h2>We Different From Others Should Choose Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    <h2>One-Stop Solution For Business Accelerating</h2>
+                    <p>To Save money and time, and get a consistent quality of work with less headache.</p>
                 </div>
 
                 <div className="row">
@@ -22,14 +22,14 @@ const OurSolutions = () => {
                             </div>
                             <h3>
                                 <Link href="/service-details">
-                                    <a>Startup Applications</a>
+                                    <a>Business Improvement</a>
                                 </Link>
                             </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adipiscing aliqua.</p>
+                            <p>Unlock the full potential of your business with our dedicated Business Improvement solution. Our expert consultants work closely with you to identify inefficiencies, streamline processes, and implement strategies for enhanced productivity and profitability.</p>
 
-                            <Link href="/service-details">
+                            {/* <Link href="/service-details">
                                 <a className="view-details-btn">View Details</a>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
 
@@ -40,14 +40,11 @@ const OurSolutions = () => {
                             </div>
                             <h3>
                                 <Link href="/service-details">
-                                    <a>SaaS Solutions</a>
+                                    <a>Marketing Systems</a>
                                 </Link>
                             </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adipiscing aliqua.</p>
+                            <p>Navigate the dynamic landscape of modern business with confidence through our advanced Marketing Systems. Tailored to meet your unique needs, our systems leverage the latest technologies and data-driven insights.</p>
                             
-                            <Link href="/service-details">
-                                <a className="view-details-btn">View Details</a>
-                            </Link>
                         </div>
                     </div>
 
@@ -58,14 +55,12 @@ const OurSolutions = () => {
                             </div>
                             <h3>
                                 <Link href="/service-details">
-                                    <a>E-Commerce Platforms</a>
+                                    <a>Branding and Design</a>
                                 </Link>
                             </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adipiscing aliqua.</p>
+                            <p>Leave a lasting impression with our exceptional Branding and Design solutions. Our creative team brings your brand to life, crafting compelling visual identities that resonate with your target audience. Whether it's a brand refresh, logo design, or complete visual overhaul, we ensure your brand stands out in a crowded market.</p>
                             
-                            <Link href="/service-details">
-                                <a className="view-details-btn">View Details</a>
-                            </Link>
+                            
                         </div>
                     </div>
                 </div>

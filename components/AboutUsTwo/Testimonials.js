@@ -56,8 +56,8 @@ const Testimonials = ({ url }) => {
                         <img src="/img/star-icon.png" alt="image" className="starIcon" />
                         Testimonials
                     </span>
-                    <h2>What Our Clients are Saying?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    <h2>Proven Excellence</h2>
+                    <p>A Glimpse into the Results We Deliver.</p>
                 </div>
 
                 {display ? <OwlCarousel
