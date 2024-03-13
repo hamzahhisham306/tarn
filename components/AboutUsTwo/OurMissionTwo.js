@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
+import ReactHtmlParser from "html-react-parser"
 
-const OurMission = () => {
+const OurMission = ({data}) => {
     return (
         <section className="our-mission-area ptb-100">
             <div className="container-fluid">
@@ -12,10 +12,8 @@ const OurMission = () => {
                                 <span className="sub-title">
                                     <img src="/img/star-icon.png" alt="image" /> 
                                 </span>
-                                <h2>How To Succeed in Today’s Competitive Market?</h2>
-                                <p>In the quest for an expanded market share, Assistech Comapn introduces the "Solid-Business" Approach...</p>
-                                <p>An encompassing strategy aimed at refining every aspect of your enterprise for unparalleled success.</p>
-                                <p>From a careful industry analysis aligning your brand seamlessly with market demands to persona-centric campaigns fostering lasting connections, our approach is rooted in personalized, data-driven insights.</p>
+                                <h2>{data?.title}</h2>
+                               <p>{ReactHtmlParser(data?.description)}</p>
                             </div>
                         </div>
                     </div>

@@ -1,33 +1,45 @@
-import React from 'react';
-import Navbar from '../components/_App/Navbar';
+import React, { useState, useEffect } from 'react';
 import PageBanner from '../components/Common/PageBanner';
 import AboutUsContent from '../components/AboutUs/AboutUsContent';
-import OurHistory from '../components/AboutUs/OurHistory';
-import WhyChooseUs from '../components/AboutUs/WhyChooseUs';
-import HowItWork from '../components/AboutUs/HowItWork';
-import TeamMembers from '../components/AboutUs/TeamMembers';
-import Testimonials from '../components/AboutUs/Testimonials';
-import Partner from '../components/AboutUs/Partner';
-import Footer from '../components/_App/Footer';
- 
-const AboutUs = () => {
+// import OurHistory from '../components/AboutUs/OurHistory';
+// import WhyChooseUs from '../components/AboutUs/WhyChooseUs';
+// import HowItWork from '../components/AboutUs/HowItWork';
+// import TeamMembers from '../components/AboutUs/TeamMembers';
+// import Testimonials from '../components/AboutUs/Testimonials';
+// import Partner from '../components/AboutUs/Partner';
+import axios from 'axios';
+import OurMission from '../components/AboutUsTwo/OurMissionTwo';
+const AboutUs = ({ url }) => {
+    const [data, setData] = useState(null);
+
+    const getAboutData = async () => {
+        await axios.get(`${url}/get_about`).then((res) => {
+            setData(res.data?.data);
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+
+    useEffect(() => {
+        getAboutData();
+    }, []);
+    console.log("about>>", data)
     return (
         <>
-            <Navbar />
             <PageBanner
-                pageTitle="About Us" 
-                homePageText="Home" 
-                homePageUrl="/" 
-                activePageText="About Us" 
+                pageTitle="About Us"
+                homePageText="Home"
+                homePageUrl="/"
+                activePageText="About Us"
             />
-            <AboutUsContent />
-            <OurHistory />
+            <AboutUsContent data={data[0]}/>
+            <OurMission data={data[1]}/>
+            {/* <OurHistory />
             <WhyChooseUs />
             <HowItWork />
             <TeamMembers />
             <Testimonials />
-            <Partner />
-            <Footer />
+            <Partner /> */}
         </>
     );
 }

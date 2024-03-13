@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
@@ -34,7 +34,7 @@ const ContactForm = ({ data }) => {
     setContact(prevState => ({ ...prevState, [name]: value }));
   }
 
-  
+
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -51,8 +51,18 @@ const ContactForm = ({ data }) => {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
+    }).then(() => {
+      alertContent();
+      setContact({
+        name: "",
+        email: "",
+        number: "",
+        subject: "",
+        text: "",
+        company_name: ""
+      })
     }).catch((err) => console.log(err))
-    
+
 
   };
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import ServiceSidebar from './ServiceSidebar';
+import ReactHtmlParser from 'html-react-parser';
 
-const ServiceDetailsContent = () => {
+const ServiceDetailsContent = ({ data, dataReated }) => {
     return (
         <section className="services-details-area ptb-100">
             <div className="container">
@@ -13,11 +14,17 @@ const ServiceDetailsContent = () => {
                         </div>
 
                         <div className="services-details-desc">
-                            <span className="sub-title">AI & ML Development</span>
-                            <h3>About this Services</h3>
-                            <p>Improve Machine Learning algorithms by studying underfitting, overfitting, training, validation, n-fold cross validation, testing, and how hyperparameters could improve performance. Perform linear and logistic regressions in Python.</p>
+                            {data?.modules.map((item) => {
+                                return <div>
 
-                            <div className="row align-items-center">
+                                    <span className="sub-title">{item?.service_title}</span>
+                                    <h3>{item?.slug}</h3>
+                                    <p>{ReactHtmlParser(item?.description)}</p>
+
+                                </div>
+                            })}
+
+                            {/* <div className="row align-items-center">
                                 <div className="col-lg-6 col-md-6">
                                     <div className="image">
                                         <img src="/img/projects/project2.jpg" alt="image" />
@@ -37,8 +44,8 @@ const ServiceDetailsContent = () => {
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-
+                            </div> */}
+                            {/* 
                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English. Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
                             <h3>Application Areas</h3>
 
@@ -51,7 +58,7 @@ const ServiceDetailsContent = () => {
                                         Manufacturing
                                     </div>
                                 </div>
-            
+
                                 <div className="col-lg-4 col-sm-6 col-md-6">
                                     <div className="single-industries-serve-box">
                                         <div className="icon">
@@ -60,7 +67,7 @@ const ServiceDetailsContent = () => {
                                         Healthcare
                                     </div>
                                 </div>
-            
+
                                 <div className="col-lg-4 col-sm-6 col-md-6">
                                     <div className="single-industries-serve-box">
                                         <div className="icon">
@@ -69,7 +76,7 @@ const ServiceDetailsContent = () => {
                                         Automobile
                                     </div>
                                 </div>
-            
+
                                 <div className="col-lg-4 col-sm-6 col-md-6">
                                     <div className="single-industries-serve-box">
                                         <div className="icon">
@@ -78,7 +85,7 @@ const ServiceDetailsContent = () => {
                                         Banking
                                     </div>
                                 </div>
-            
+
                                 <div className="col-lg-4 col-sm-6 col-md-6">
                                     <div className="single-industries-serve-box">
                                         <div className="icon">
@@ -87,7 +94,7 @@ const ServiceDetailsContent = () => {
                                         Real Estate
                                     </div>
                                 </div>
-            
+
                                 <div className="col-lg-4 col-sm-6 col-md-6">
                                     <div className="single-industries-serve-box">
                                         <div className="icon">
@@ -96,9 +103,9 @@ const ServiceDetailsContent = () => {
                                         Logistics
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
-                            <h3>Technologies That We Use</h3>
+                            {/* <h3>Technologies That We Use</h3>
                             <ul className="technologies-features">
                                 <li><span>JavaScript</span></li>
                                 <li><span>Python</span></li>
@@ -109,7 +116,7 @@ const ServiceDetailsContent = () => {
                                 <li><span>C# (C- Sharp)</span></li>
                                 <li><span>Ruby</span></li>
                                 <li><span>SQL</span></li>
-                            </ul>
+                            </ul> */}
                             <div className="charts-image">
                                 <img src="/img/services/charts.jpg" alt="image" />
                             </div>
@@ -117,7 +124,7 @@ const ServiceDetailsContent = () => {
                     </div>
 
                     <div className="col-lg-4 col-md-12">
-                        <ServiceSidebar />
+                        <ServiceSidebar  dataReated={dataReated}/>
                     </div>
                 </div>
             </div>

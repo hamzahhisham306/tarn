@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+import axios from 'axios'
 const AboutUs = () => {
+
+  
+
     return (
         <section className="about-area pb-100">
             <div className="container-fluid">
@@ -16,12 +19,12 @@ const AboutUs = () => {
                         <div className="about-content">
                             <div className="content">
                                 <span className="sub-title">
-                                    <img src="/img/star-icon.png" alt="image" /> 
+                                    <img src="/img/star-icon.png" alt="image" />
                                     About Us
                                 </span>
                                 <h2>Drive Digital Revolution Through Data Science</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                                
+
                                 <ul className="features-list">
                                     <li>
                                         <img src="/img/icons/icon4.png" alt="image" />
@@ -48,7 +51,7 @@ const AboutUs = () => {
                                     </li>
                                 </ul>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                                
+
                                 <Link href="/about-us">
                                     <a className="default-btn">
                                         <i className="flaticon-right"></i>More About Us<span></span>

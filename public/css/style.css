@@ -343,6 +343,11 @@ a:hover {
   display: inline-block;
   font-size: 44px;
 }
+.partnerImage{
+  width: 300px !important;
+  height: 300px !important;
+  object-fit: cover;
+}
 
 .section-title h2 .overlay {
   position: absolute;
@@ -12109,7 +12114,10 @@ Go Top CSS
   right: 0;
   z-index: 999999;
 }
-
+.serverImage{
+  width: 100px;
+  object-fit: cover;
+}
 .lang-didebar a {
   background-color: #000;
   color: #fff;
@@ -12148,5 +12156,16 @@ Go Top CSS
     position: relative;
     left: 90px;
   }
+ 
+  .partnerImage{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
 }
 /*# sourceMappingURL=style.css.map */

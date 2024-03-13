@@ -30,12 +30,7 @@ const AboutUsContent = () => {
                                 <p>Your potential customers are bombarded with choices every day, and if your brand isn't unmistakably superior, you're at risk of being overlooked.
 
 Picture this: your competitors are out there, actively engaging with your target audience, stealing attention, and grabbing a larger slice of the market pie</p>
-                                <Link href="/about-us-two">
-                                    <a className="default-btn">
-                                        <i className="flaticon-right"></i> 
-                                        More About Us <span></span>
-                                    </a>
-                                </Link>
+                      
                             </div>
                         </div>
                     </div>

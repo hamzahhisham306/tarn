@@ -19,7 +19,7 @@ export default class MyApp extends App {
         const { Component, pageProps } = this.props
         return (
             <RecoilRoot>
-                <Layout>
+                <Layout url={url}>
                     <Component {...pageProps} url={url}/>
                 </Layout>
             </RecoilRoot>
