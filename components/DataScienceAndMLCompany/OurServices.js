@@ -14,7 +14,7 @@ const OurServices = ({ url }) => {
         getSliderData();
     }, []);
     return (
-        <section className="services-area ptb-100 bg-f1f8fb">
+        <section className="services-area ptb-100 bg-f1f8fb" id='service_section'>
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">

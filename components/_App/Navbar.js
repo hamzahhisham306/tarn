@@ -74,8 +74,8 @@ const Navbar = ({data}) => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <LinkN href="/services" activeClassName="active">
-                                        <a onClick={() => setCollapsed(true)} className="nav-LinkN">
+                                    <LinkN href="#service_section" >
+                                        <a className='servicesItem'>
                                             Services
                                         </a>
                                     </LinkN>

@@ -12125,7 +12125,15 @@ Go Top CSS
   padding: 6px 9px;
   font-size: 14px;
 }
-
+.servicesItem:focus{
+  color: var(--text2-color) !important;
+}
+.servicesItem:hover{
+  color: var(--hover-color) !important;
+}
+.servicesItem{
+  color: var(--text2-color) !important;
+}
 .lang-didebar a:last-child {
   background-color: #483e3e;
 }

@@ -7,6 +7,7 @@ const options = {
     loop: true,
     nav: true,
     dots: false,
+    autoplayTimeout: 1000,
     autoplayHoverPause: true,
     autoplay: true,
     items: 1,
@@ -66,8 +67,7 @@ const CaseStudySlider = ({ url }) => {
                 </div>
             </div>
             })}
-                
-            </OwlCarousel> : ''}
+            </OwlCarousel> : <></>}
         </div>
     )
 }

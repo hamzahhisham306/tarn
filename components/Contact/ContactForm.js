@@ -170,7 +170,8 @@ const ContactForm = ({ data }) => {
                     </div>
                   </div>
                   <div className="col-lg-12 col-sm-12">
-                    <button type='submit'>
+                    <button type='submit' className='default-btn'>
+                      <i className="flaticon-tick"></i>
                       Send Message
                     </button>
                   </div>

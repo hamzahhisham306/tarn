@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 const OwlCarousel = dynamic(import('react-owl-carousel3'));
+import axios from 'axios';
 
 const options = {
     loop: true,
     nav: true,
     dots: false,
     autoplayHoverPause: true,
+    autoplayTimeout: 1000,
     autoplay: true,
     margin: 30,
     navText: [
@@ -27,9 +29,21 @@ const options = {
     }
 };
 
-const Testimonials = () => {
+const Testimonials = ({ url }) => {
     const [display, setDisplay] = React.useState(false);
+    const [data, setData] = useState(null);
 
+    const getAboutData = async () => {
+        await axios.get(`${url}/get_project`).then((res) => {
+            setData(res.data?.data);
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+
+    useEffect(() => {
+        getAboutData();
+    }, []);
     React.useEffect(() => {
         setDisplay(true);
     }, [])
@@ -39,49 +53,39 @@ const Testimonials = () => {
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">
-                        <img src="/img/star-icon.png" alt="image"  className="starIcon"/> 
+                        <img src="/img/star-icon.png" alt="image" className="starIcon" />
                         Testimonials
                     </span>
                     <h2>What Our Clients are Saying?</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                 </div>
 
-                {display ? <OwlCarousel 
+                {display ? <OwlCarousel
                     className="testimonials-slides owl-carousel owl-theme"
                     {...options}
-                > 
-                    <div className="single-testimonials-item">
-                        {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p> */}
-                          <img src="/img/projectOne.webp"/> 
-                        <div className="client-info">
-                            <div className="d-flex justify-content-center align-items-center">
-                                {/* <img src="/img/projectTwo.webp" alt="image" /> */}
-                                <div className="title">
-                                    <h3>Mobile Friendly Website Layouts</h3>
-                                    <span className="viewButton">View</span>
+                >
+                    {data?.map((item) => {
+                        return <div className="single-testimonials-item">
+                            <img src={item?.first_image} />
+                            <div className="client-info">
+                                <div className="d-flex justify-content-center align-items-center">
+                                    {/* <img src="/img/projectTwo.webp" alt="image" /> */}
+                                    <div className="title">
+                                        <h3>{item?.title}</h3>
+                                        <span className="viewButton">View</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    })}
 
+{/* 
                     <div className="single-testimonials-item">
-                    <img src="/img/projectTwo.webp" alt="image" />
+                        <img src="/img/projectTwo.webp" alt="image" />
 
                         <div className="client-info">
                             <div className="d-flex justify-content-center align-items-center">
 
-                                <div className="title">
-                                    <h3>Digital Agency HTML Templates</h3>
-                                    <span className="viewButton">View</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="single-testimonials-item">
-                    <img src="/img/projectTwo.webp" alt="image" />
-                        <div className="client-info">
-                            <div className="d-flex justify-content-center align-items-center">
                                 <div className="title">
                                     <h3>Digital Agency HTML Templates</h3>
                                     <span className="viewButton">View</span>
@@ -89,12 +93,24 @@ const Testimonials = () => {
                             </div>
                         </div>
                     </div>
+
+                    <div className="single-testimonials-item">
+                        <img src="/img/projectTwo.webp" alt="image" />
+                        <div className="client-info">
+                            <div className="d-flex justify-content-center align-items-center">
+                                <div className="title">
+                                    <h3>Digital Agency HTML Templates</h3>
+                                    <span className="viewButton">View</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> */}
                 </OwlCarousel> : ''}
 
                 <div className="testimonials-view-btn text-center">
                     <Link href="/testimonials">
                         <a className="default-btn">
-                            <i className="flaticon-view"></i> 
+                            <i className="flaticon-view"></i>
                             Check Out All Reviews <span></span>
                         </a>
                     </Link>

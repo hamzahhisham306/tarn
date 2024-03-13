@@ -8,11 +8,7 @@ import OurMission from '../components/AboutUsTwo/OurMission';
 import Testimonials from '../components/AboutUsTwo/Testimonials';
 
 const Index = ({ url }) => {
-    const data = [
-        {
-
-        }
-    ]
+ 
 
     return (
         <>
@@ -21,7 +17,7 @@ const Index = ({ url }) => {
             <CaseStudySlider url={url} />
             <AboutUsContent />
             <OurMission />
-            <Testimonials />
+            <Testimonials url={url}/>
             <Partner url={url} />
 
             <OurServices url={url}/>
@@ -33,14 +29,3 @@ const Index = ({ url }) => {
 export default Index;
 
 
-// export async function getStaticProps() {
-//     const url = process.env.REACT_BACKEND_URL;
-//     const respones = await axios.get(`${url}/get_settings`).catch((err) => {
-//         console.log(err);
-//     })
-//     return {
-//         props: {
-//             data: respones?.data?.data,
-//         }
-//     }
-// }

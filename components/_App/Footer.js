@@ -128,7 +128,7 @@ const Footer = ({ data }) => {
                     <div className="row align-items-center">
                      
 
-                        <div className="col-lg-6 col-md-6">
+                        {/* <div className="col-lg-6 col-md-6">
                             <ul>
                                 <li>
                                     <Link href="/privacy-policy">
@@ -141,7 +141,7 @@ const Footer = ({ data }) => {
                                     </Link>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

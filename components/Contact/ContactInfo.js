@@ -1,9 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 
-const ContactInfo = () => {
+const ContactInfo = ({ data }) => {
+
     return (
-        <div className="contact-info-area pt-100 pb-70">
+        <>
+        {data?.slice(0,1)?.map((item)=>{
+            return   <div className="contact-info-area pt-100 pb-70">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-4 col-md-6">
@@ -15,7 +18,7 @@ const ContactInfo = () => {
                                 <i className='bx bx-map'></i>
                             </div>
                             <h3>Our Address</h3>
-                            <p>175 5th Ave, New York, NY 10010, United States</p>
+                            <p>{item?.address}</p>
                         </div>
                     </div>
 
@@ -28,8 +31,8 @@ const ContactInfo = () => {
                                 <i className='bx bx-phone-call'></i>
                             </div>
                             <h3>Contact</h3>
-                            <p>Mobile: <a href="tel:+44457895789">(+44) - 45789 - 5789</a></p>
-                            <p>E-mail: <a href="mailto:hello@tracer.com">hello@tarn.com</a></p>
+                            <p>Mobile: <a href="tel:+44457895789">{item?.phone_number}</a></p>
+                            <p>E-mail: <a href="mailto:hello@tracer.com">{item?.email}</a></p>
                         </div>
                     </div>
 
@@ -42,13 +45,16 @@ const ContactInfo = () => {
                                 <i className='bx bx-time-five'></i>
                             </div>
                             <h3>Hours of Operation</h3>
-                            <p>Monday - Friday: 09:00 - 20:00</p>
-                            <p>Sunday & Saturday: 10:30 - 22:00</p>
+                            {/* <p>Monday - Friday: 09:00 - 20:00</p> */}
+                            <p>Sunday & Thursday: 09:30 - 17:00</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        })}
+      
+        </>
     )
 }
 
